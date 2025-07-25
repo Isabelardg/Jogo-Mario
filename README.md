@@ -8,7 +8,7 @@ Um joguinho de plataforma onde o Mario pula canos, com fundo que muda entre dia 
 
 ## 🔗 Como rodar o jogo
 
-Para jogar, basta abrir o arquivo `index.html` no seu navegador preferido (recomendo Chrome ou Firefox).
+Para jogar, basta acessar esse link: https://isabelardg.github.io/Jogo-Mario/
 
 ---
 
