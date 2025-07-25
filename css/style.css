@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%;
+    height: 100vh; 
+    border-bottom: 15px solid rgb(16, 78, 4);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#42BBEB, #EBAF42);
+}
+
+.game-board.to-night {
+    animation: toNight 5s forwards;
+}
+
+.game-board.to-day {
+    animation: toDay 5s forwards;
+}
+
+.score{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    z-index: 10;
+    user-select: none;
+}
+
+.best-score{
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(210, 221, 115);
+    text-shadow: 2px 2px 4px black;
+    z-index: 10;
+    user-select: none;
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;   
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+    z-index: 1;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.clouds{
+    position: absolute;
+    top: 60px;
+    right: -550px;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear;
+    z-index: 0;
+}
+
+.game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    z-index: 100;
+    display: none; 
+    font-family: inherit; 
+    text-align: center;
+    padding: 0 20px;
+}
+
+.game-over-screen button {
+    margin-top: 20px;
+    padding: 12px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: inherit; 
+    border: none;
+    border-radius: 8px;
+    background-color: #b8973e; 
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.game-over-screen button:hover {
+    background-color: #a59456;
+}
+
+@keyframes pipe-animation {
+    from { right: 0; }
+    to { right: 100%; }
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    40%, 50%, 60% { bottom: 180px; }
+    100% { bottom: 0; }
+}
+
+@keyframes clouds-animation {
+    from { right: -550px; }
+    to { right: 100%; }
+}
+
+@keyframes toNight {
+    0% {
+        background: linear-gradient(#42BBEB, #EBAF42); /* dia */
+    }
+    40%{
+        background: linear-gradient(#1e97c7, #9e721f);
+    }
+    50% {
+        background: linear-gradient(#1a3e7a, #442e0c); /* pôr do sol */
+    }
+    100% {
+        background: linear-gradient(#0b1d51, #000814); /* noite */
+    }
+}
+
+@keyframes toDay {
+    0% {
+        background: linear-gradient(#0b1d51, #000814); /* noite */
+    }
+    50% {
+        background: linear-gradient(#1a3e7a, #442e0c); /* amanhecendo */
+    }
+    60%{
+        background: linear-gradient(#1e97c7, #9e721f);
+    }
+    100% {
+        background: linear-gradient(#42BBEB, #EBAF42); /* dia */
+    }
+}
+
+/* responsividade pra cll */
+@media (max-width: 600px) {
+    .mario {
+        width: 90px; 
+        bottom: 0;
+    }
+    .pipe {
+        width: 50px;
+        animation-duration: 2.2s; 
+    }
+    .clouds {
+        width: 300px;
+        top: 30px;
+        animation-duration: 30s;
+    }
+    .score {
+        font-size: 18px;
+        top: 5px;
+        left: 5px;
+    }
+    .best-score {
+        font-size: 16px;
+        top: 28px;
+        left: 5px;
+    }
+    .game-over-screen {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+    .game-over-screen button {
+        font-size: 18px;
+        padding: 10px 24px;
+    }
+}

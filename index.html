@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Mario</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="game-board">
+        <div class="score">Score: 0</div>
+        <div class="best-score">Best Score: 0</div>
+        <img src="./imagens/mario.gif" class="mario">
+        <img src="./imagens/pipe.png" class="pipe">
+        <img src="./imagens/clouds.png" class="clouds">
+    </div>
+
+    <div class="game-over-screen" id="game-over-screen">
+        <h2>Você Perdeu💀</h2>
+        <button onclick="reiniciar()">Jogar novamente</button>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
