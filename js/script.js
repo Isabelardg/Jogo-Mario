@@ -1,6 +1,15 @@
 window.onload = () => {
-  window.scrollTo(0, 60); // rola um pouco a tela no celular
-  document.body.style.overflow = 'hidden'; // impede rolagem
+  const jaScrollou = sessionStorage.getItem('scrollFeito');
+
+  if (jaScrollou === 'true') {
+    window.scrollTo(0, 60);
+    sessionStorage.removeItem('scrollFeito');
+  }
+
+  setTimeout(() => {
+    window.scrollTo(0, 60);
+    document.body.style.overflow = 'hidden';
+  }, 50);
 }
 
 const mario = document.querySelector('.mario');
@@ -100,5 +109,6 @@ document.addEventListener('keydown', jump);
 document.addEventListener('touchstart', () => jump());
 
 function reiniciar() {
+    sessionStorage.setItem('scrollFeito', 'true');
     location.reload();
 }
