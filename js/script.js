@@ -1,3 +1,9 @@
+window.onload = () => {
+  if (window.innerWidth <= 600) {
+    window.scrollTo(0, 60); // desce a tela no início só em celular
+    document.body.style.overflow = 'hidden'; // trava a rolagem
+  }
+};
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
@@ -94,5 +100,9 @@ document.addEventListener('keydown', jump);
 document.addEventListener('touchstart', () => jump());
 
 function reiniciar() {
+    if (window.innerWidth <= 600) {
+    window.scrollTo(0, 60);
+    document.body.style.overflow = 'hidden';
+  }
     location.reload();
 }
