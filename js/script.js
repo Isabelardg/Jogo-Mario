@@ -8,8 +8,8 @@ const restartButton = gameOverScreen.querySelector('button');
 const gameBoard = document.querySelector('.game-board');
 
 // sons de pulo e quando perde
-const somPulo = new Audio('../audios/pulo.wav');
-const overSom = new Audio('../audios/over.wav');
+const somPulo = new Audio('./audios/pulo.wav');
+const overSom = new Audio('./audios/over.wav');
 
 let score = 0;
 let scored = false;
