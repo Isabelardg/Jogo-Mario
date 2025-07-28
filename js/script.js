@@ -1,3 +1,8 @@
+window.onload = () => {
+  window.scrollTo(0, 60); // rola um pouco a tela no celular
+  document.body.style.overflow = 'hidden'; // impede rolagem
+}
+
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
