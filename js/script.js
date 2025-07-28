@@ -1,17 +1,7 @@
 window.onload = () => {
-  const jaScrollou = sessionStorage.getItem('scrollFeito');
-
-  if (jaScrollou === 'true') {
-    window.scrollTo(0, 60);
-    sessionStorage.removeItem('scrollFeito');
-  }
-
-  setTimeout(() => {
-    window.scrollTo(0, 60);
-    document.body.style.overflow = 'hidden';
-  }, 50);
+  window.scrollTo(0, 60); // Desce a tela logo ao carregar
+  document.body.style.overflow = 'hidden'; // Impede rolagem
 }
-
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
@@ -100,6 +90,9 @@ const loop = setInterval(() => {
             bestScoreDisplay.textContent = `Best: ${bestScore}`;
         }
 
+       document.body.style.overflow = 'hidden';
+        window.scrollTo(0, 60);
+      
         gameOverScreen.style.display = 'flex';
     }
 
@@ -109,6 +102,5 @@ document.addEventListener('keydown', jump);
 document.addEventListener('touchstart', () => jump());
 
 function reiniciar() {
-    sessionStorage.setItem('scrollFeito', 'true');
     location.reload();
 }
