@@ -43,11 +43,13 @@ O jogo ajusta tamanho dos elementos para telas menores, garantindo boa experiên
 
 ### Tela do jogo
 
-![Mario pulando e cano](./imagens/screenshot1.png)
+<img width="1354" height="629" alt="image" src="https://github.com/user-attachments/assets/e8475ee2-ca24-4bc8-a992-5f545d686345" />
+
 
 ### Tela de Game Over
 
-![Game Over](./imagens/screenshot2.png)
+<img width="1354" height="629" alt="image" src="https://github.com/user-attachments/assets/bdc166ca-9ff6-4372-ace2-cd5f536e9e81" />
+
 
 ---
 
