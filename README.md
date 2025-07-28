@@ -46,6 +46,10 @@ O jogo ajusta tamanho dos elementos para telas menores, garantindo boa experiên
 
 <img width="1354" height="629" alt="image" src="https://github.com/user-attachments/assets/e8475ee2-ca24-4bc8-a992-5f545d686345" />
 
+### Tela de Noite
+
+![Tela Noite](https://github.com/user-attachments/assets/97cf3801-3c02-4566-831a-0beec8d03147)
+
 
 ### Tela de Game Over
 
