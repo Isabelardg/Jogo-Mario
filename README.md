@@ -1,4 +1,4 @@
-# 🎮 Jogo do Mario
+# 🍄 Jogo do Mario
 
 Bem-vindo ao Jogo do Mario!
 
@@ -30,6 +30,7 @@ Para jogar, basta acessar esse link: https://isabelardg.github.io/Jogo-Mario/
 - Tela de “Game Over” com opção para reiniciar  
 - Fundo alterna suavemente entre dia e noite a cada 30 segundos  
 - Design responsivo, funciona bem em celulares e desktops
+- 🌙 Modo dia/noite alternando automaticamente a cada 30 segundos
 
 ---
 
