@@ -131,33 +131,33 @@
     to { right: 100%; }
 }
 
-@keyframes toNight {
+@keyframes toNight {                /* essa animação ocorre a cada 30 segundos, tanto pra noite quanto pro dia */
     0% {
-        background: linear-gradient(#42BBEB, #EBAF42); /* dia */
+        background: linear-gradient(#42BBEB, #EBAF42); /* sai do dia e vai ficando de noite */
     }
     40%{
         background: linear-gradient(#1e97c7, #9e721f);
     }
     50% {
-        background: linear-gradient(#1a3e7a, #442e0c); /* pôr do sol */
+        background: linear-gradient(#1a3e7a, #442e0c); 
     }
     100% {
-        background: linear-gradient(#0b1d51, #000814); /* noite */
+        background: linear-gradient(#0b1d51, #000814); 
     }
 }
 
 @keyframes toDay {
     0% {
-        background: linear-gradient(#0b1d51, #000814); /* noite */
+        background: linear-gradient(#0b1d51, #000814); /* sai da noite pro dia apos a animação de deixar noite */
     }
     50% {
-        background: linear-gradient(#1a3e7a, #442e0c); /* amanhecendo */
+        background: linear-gradient(#1a3e7a, #442e0c); 
     }
     60%{
         background: linear-gradient(#1e97c7, #9e721f);
     }
     100% {
-        background: linear-gradient(#42BBEB, #EBAF42); /* dia */
+        background: linear-gradient(#42BBEB, #EBAF42); 
     }
 }
 
@@ -169,12 +169,17 @@
     }
     .pipe {
         width: 50px;
-        animation-duration: 2.2s; 
+        animation-duration: 1.25s; 
     }
     .clouds {
         width: 300px;
         top: 30px;
         animation-duration: 30s;
+    }
+    .jump {
+    animation-name: jump-mobile;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
     }
     .score {
         font-size: 18px;
@@ -195,3 +200,14 @@
         padding: 10px 24px;
     }
 }
+
+@keyframes jump-mobile {
+    0% { bottom: 0; }
+    20% { bottom: 200px; }  /* fiz uma animação pro mario conseguir ultrapassar o pipe em telas pequenas */
+    40% { bottom: 240px; }  
+    60% { bottom: 240px; }  
+    80% { bottom: 240px; }  
+    90% { bottom: 240px; } 
+    95% { bottom: 220px; }  
+    100% { bottom: 0; }
+    }
