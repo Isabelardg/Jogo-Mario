@@ -1,7 +1,9 @@
 window.onload = () => {
-  window.scrollTo(0, 60); // Desce a tela logo ao carregar
-  document.body.style.overflow = 'hidden'; // Impede rolagem
-}
+  window.scrollTo(0, 60); // ajusta a rolagem pra posição ideal
+  setTimeout(() => {
+    document.body.style.overflow = 'hidden'; // trava depois que ajusta
+  }, 100); // espera um pouco pra garantir que rolou antes de travar
+};
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
@@ -89,11 +91,9 @@ const loop = setInterval(() => {
             localStorage.setItem('bestScore', bestScore);
             bestScoreDisplay.textContent = `Best: ${bestScore}`;
         }
-
-       document.body.style.overflow = 'hidden';
-        window.scrollTo(0, 60);
-      
         gameOverScreen.style.display = 'flex';
+
+        document.body.style.overflow = 'hidden';
     }
 
 }, 10);
